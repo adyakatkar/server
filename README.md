@@ -1,59 +1,64 @@
-For the Server Repository (server/README.md)
 NovaNews Backend
-This server handles news fetching, AI summarization, and database interactions for the NovaNews application.
+This repository contains the Node.js and Express server for the NovaNews application. It handles news data retrieval from NewsAPI, AI summarization using the Gemini API, and database management via Supabase.
 
-Tech Stack
-Runtime: Node.js and Express
+Prerequisites
+Node.js installed
 
-Database: PostgreSQL via Supabase
-
-AI Integration: Google Gemini API
+npm (Node Package Manager)
 
 Local Setup
-Clone the repository:
-git clone https://github.com/adyakatkar/server.git
+Clone the repository to your local machine.
 
-Install dependencies:
+Open a terminal in the server folder.
+
+Install the required dependencies:
 npm install
 
-Environment Variables:
-Create a .env file in the root directory and add the following keys:
+Configuration
+Create a file named .env in the root directory.
 
-NEWS_API_KEY
+Add the following environment variables (replace with actual keys):
 
-GEMINI_API_KEY
+NEWS_API_KEY=your_key
 
-SUPABASE_URL
+GEMINI_API_KEY=your_key
 
-SUPABASE_KEY
+SUPABASE_URL=your_supabase_url
 
-Start the server:
+SUPABASE_KEY=your_supabase_anon_key
+
+Running the Server
+Start the server using the command:
 node server.js
 
-The server will run on http://localhost:5000
+The backend will be accessible at http://localhost:5000.
 
-For the Frontend Repository (client/README.md)
+2. For the Frontend Repository (client/README.md)
 NovaNews Frontend
-NovaNews is a web application that displays real-time news headlines and provides AI-generated summaries.
+This repository contains the React.js frontend for the NovaNews application. It provides an interface to browse news, search by category, and save articles with AI-generated summaries.
 
-Tech Stack
-Framework: React.js
+Prerequisites
+Node.js installed
 
-Data Fetching: Axios
+npm (Node Package Manager)
 
-Backend Connection: Node.js Proxy
+The NovaNews Backend must be running on port 5000 for full functionality.
 
 Local Setup
-Clone the repository:
-git clone https://github.com/adyakatkar/client.git
+Clone the repository to your local machine.
 
-Install dependencies:
+Open a terminal in the client folder.
+
+Install the required dependencies:
 npm install
 
-Configure API URL:
-Open src/App.js and ensure the API_BASE_URL is set to http://localhost:5000.
+Connection Setup
+Open the file src/App.js.
 
-Start the application:
+Ensure the API_BASE_URL constant is set to http://localhost:5000 to communicate with the local backend.
+
+Running the Application
+Start the development server:
 npm start
 
-The application will run on http://localhost:3000
+The application will open automatically in your browser at http://localhost:3000.
